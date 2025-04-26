@@ -1,6 +1,6 @@
 #!/usr/bin/env pypy310
 
-def caesar(s:str, key:int, encode:bool = True) -> str:
+def caesar(s: str, key: int, encode: bool = True) -> str:
     """Caesar cipher."""
     key %= 26
     def shift(c:chr) -> str:
@@ -12,6 +12,6 @@ def caesar(s:str, key:int, encode:bool = True) -> str:
     return ''.join(shift(c) for c in s)
 
 
-def is_palindrome(s:str) -> bool:
+def is_palindrome(s: str) -> bool:
     """Palindrome."""
     return s == s[::-1]

@@ -7,7 +7,10 @@ from math import ceil
 from lib.utils import parse, answer
 
 
-def solve(cukier:list[int | str | datetime], cennik:list[int | float]) -> None:
+def solve(
+    cukier: list[int | str | datetime],
+    cennik: list[int | float]
+) -> None:
     cennik = {int(i[0]): i[1] for i in cennik}  
     volume = {}
     for i in cukier: volume[i[1]] = volume.get(i[1], 0) + i[2]

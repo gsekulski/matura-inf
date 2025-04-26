@@ -5,9 +5,9 @@ from lib.algorithms.string import caesar
 
 
 def solve(
-    a:list[str],
-    b:list[int | str],
-    c:list[str]
+    a: list[str],
+    b: list[int | str],
+    c: list[str]
 ) -> None:  
     s1 = [caesar(i, 107) for i in a]
 

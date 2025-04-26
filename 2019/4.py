@@ -5,12 +5,12 @@ from math import factorial, gcd
 from lib.utils import parse, answer
 
 
-def factorial_digit_sum(n:int) -> int:
+def factorial_digit_sum(n: int) -> int:
     n = list(str(n))
     return sum(factorial(int(d)) for d in n)
 
 
-def solve(liczby:list[int]) -> None:
+def solve(liczby: list[int]) -> None:
     def longest_subsequence(i=0, best=(0, 0, 0)) -> tuple[int, int, int]:
         if i >= len(liczby): return best
         g, j = liczby[i], i

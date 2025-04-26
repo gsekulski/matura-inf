@@ -3,7 +3,7 @@
 from lib.utils import parse, answer
 
 
-def solve(sygnaly:list[str]) -> list[any]:
+def solve(sygnaly: list[str]) -> list[any]:
     s1 = "".join([sygnaly[i][9] for i in range(len(sygnaly)) if i % 40 == 39])
 
     s2 = max(sygnaly, key=lambda v: len(set(v)))

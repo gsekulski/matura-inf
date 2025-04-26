@@ -4,17 +4,17 @@ from math import isqrt
 from typing import Generator
 
 
-def gcd(a:int, b:int) -> int:
+def gcd(a: int, b: int) -> int:
     """Greatest common divisor."""
     return gcd(b, a % b) if b else abs(a)
 
 
-def lcm(a:int, b:int) -> int:
+def lcm(a: int, b: int) -> int:
     """Least common multiple."""
     return (a * b) // (gcd(a, b))
 
 
-def is_prime(n:int) -> bool:
+def is_prime(n: int) -> bool:
     """Primality check."""
     if n % 2 == 0:
         if n == 2:
@@ -35,7 +35,7 @@ def fibonacci(n: int) -> int:
     return fib(0, 1, n)
 
 
-def primes(n:int) -> Generator[int, None, None]:
+def primes(n: int) -> Generator[int, None, None]:
     """Primeset generator."""
     multiples = set()
 
@@ -45,7 +45,7 @@ def primes(n:int) -> Generator[int, None, None]:
             multiples.update(range(i * i, n + 1, i))
 
 
-def factors(n:int) -> list[int]:
+def factors(n: int) -> list[int]:
     """Integer factors."""
     f1, f2 = [], []
 

@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    gracze:list[int | str | datetime],
-    klasy:list[int | str],
-    jednostki:list[int | str]
+    gracze: list[int | str | datetime],
+    klasy: list[int | str],
+    jednostki: list[int | str]
 ) -> None:
     x = {i[1]: sum(1 for j in gracze if j[1] == i[1] and j[2].year == 2018) for i in gracze}
     s1 = sorted(x.items(), key=lambda item: item[1], reverse=True)[:5]

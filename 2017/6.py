@@ -6,7 +6,7 @@ from lib.utils import parse, answer
 from lib.algorithms.string import is_palindrome
 
 
-def solve(dane:list[list[int]]) -> None:
+def solve(dane: list[list[int]]) -> None:
     s1 = [max(map(max, dane)), min(map(min, dane))]
 
     s2 = len(dane) - sum(1 for i in dane if i == i[::-1]) 

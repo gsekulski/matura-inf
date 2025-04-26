@@ -5,7 +5,7 @@ from math import floor
 from lib.utils import parse, answer
 
 
-def solve(kraina:list[int | str]) -> None:
+def solve(kraina: list[int | str]) -> None:
     s1 = {}
     for i in kraina: s1[i[0][3]] = s1.get(i[0][3], 0) + i[1] + i[2]
 

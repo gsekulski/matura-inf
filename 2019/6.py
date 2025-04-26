@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    marki:list[str],
-    perfumy:list[int | str],
-    sklad:list[str]
+    marki: list[str],
+    perfumy: list[int | str],
+    sklad: list[str]
 ) -> None:
     sklady = {}
     for i in sklad: sklady[i[0]] = sklady.get(i[0], []) + [i[1]]

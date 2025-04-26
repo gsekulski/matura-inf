@@ -5,7 +5,7 @@ from math import pi
 from lib.utils import parse, answer
 
 
-def circle_state(x:int, y:int) -> int:
+def circle_state(x: int, y: int) -> int:
     pos = pow(x - 200, 2) + pow(y - 200, 2)
     
     if pos < 40000: return 1
@@ -13,7 +13,7 @@ def circle_state(x:int, y:int) -> int:
     return 0
 
 
-def solve(punkty:list[int]) -> None:
+def solve(punkty: list[int]) -> None:
     s1 = [
         len([i for i in punkty if circle_state(i[0], i[1]) == 1]),
         [i for i in punkty if circle_state(i[0], i[1]) == 2]

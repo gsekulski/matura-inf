@@ -4,8 +4,8 @@ from lib.utils import parse, answer
 from lib.algorithms.numbers import primes
 
 
-def solve(pary:list[int]) -> None:
-    def longest_common(w:str) -> tuple[str, int]:
+def solve(pary: list[int]) -> None:
+    def longest_common(w: str) -> tuple[str, int]:
         best, cur = "", ""
         for c in w:
             cur = cur + c if cur and c == cur[-1] else c

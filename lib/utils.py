@@ -6,12 +6,12 @@ from datetime import datetime
 
 
 def process(
-    data:list[any],
-    header:bool,
-    delimeter:str,
-    n_col:int
+    data: list[any],
+    header: bool,
+    delimeter: str,
+    n_col: int
 ) -> list[any]:
-    def is_date(s:str) -> str | None:
+    def is_date(s: str) -> str | None:
         date_fmts = [
             "%Y-%m-%d %H:%M:%S",
             "%d-%m-%Y %H:%M:%S",
@@ -31,13 +31,13 @@ def process(
                 pass
         return None
 
-    def is_float(s:str) -> float | bool:
+    def is_float(s: str) -> float | bool:
         try:
             return float(s.replace(',', '.'))
         except ValueError:
             return False
 
-    def is_int(s:str) -> int | bool:
+    def is_int(s: str) -> int | bool:
         return int(s) if s.lstrip('-').isdigit() else False
 
     if n_col == 1 and not header:
@@ -72,17 +72,17 @@ def parse(*files) -> list[any]:
         frame = inspect.stack()[2]
         return os.path.dirname(os.path.abspath(frame.filename))
 
-    def get_data(base:str) -> str:
+    def get_data(base: str) -> str:
         for e in os.scandir(base):
             if "dane" in e.name.lower():
                 return e.path
         return None
 
-    def get_delimeter(line) -> str:
+    def get_delimeter(line: str) -> str:
         d = [';', '\t', ' ']
         return max(d, key=line.count)
 
-    def is_header(line:list[str]) -> bool:
+    def is_header(line: list[str]) -> bool:
         keywords = {"id", "numer", "czas", "rodzaj", "pesel", "imie",
         "nazwisko", "lp", "id_pok", "tytul", "data", "kod", "panstwo",
         "jezyk", "nazwa", "dzien"}

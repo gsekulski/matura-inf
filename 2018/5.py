@@ -6,7 +6,7 @@ from math import ceil
 from lib.utils import parse, answer
 
 
-def solve(woda:list[int | datetime]) -> None:
+def solve(woda: list[int | datetime]) -> None:
     s1 = {}
     s1 = {i[0].year: s1.get(i[0].year, 0) + i[1] for i in woda}
     s1 = max(s1, key=s1.get)

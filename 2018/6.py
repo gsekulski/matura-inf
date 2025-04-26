@@ -7,9 +7,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    komputery:list[str],
-    awarie:list[int | str],
-    naprawy:list[int | str]
+    komputery: list[str],
+    awarie: list[int | str],
+    naprawy: list[int | str]
 ) -> None: 
     x = {int(i[0]): i[1] for i in komputery}
     sekcje = defaultdict(set)

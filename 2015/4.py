@@ -5,7 +5,7 @@ from collections import Counter
 from lib.utils import parse, answer
 
 
-def solve(liczby:list[int]) -> None:
+def solve(liczby: list[int]) -> None:
     s1 = sum(1 for i in [dict(Counter(str(n))) for n in liczby] \
     if i.get('0', 0) > i.get('1', 0))
 

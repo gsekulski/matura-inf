@@ -5,7 +5,7 @@ from collections import Counter
 from lib.utils import parse, answer
 
 
-def solve(instrukcje:list[str]) -> None:
+def solve(instrukcje: list[str]) -> None:
     s2, s4 = [instrukcje[0][0], 1, instrukcje[0][0], 1], ""
 
     for i in instrukcje:

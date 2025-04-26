@@ -1,3 +1,5 @@
+#!/usr/bin/env pypy3
+
 def max_subarray(l: list[int]) -> int:
     """Largest sum of any contiguous subarray."""
     res = float('-inf')

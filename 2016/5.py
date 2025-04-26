@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    studenci:list[str],
-    meldunek:list[str],
-    wypozyczenia:list[str]
+    studenci: list[str],
+    meldunek: list[str],
+    wypozyczenia: list[str]
 ) -> None:
     studenci = {i[0]: i[1:] for i in studenci}
     studenci = dict(sorted(studenci.items(), key=lambda i: i[1][0]))

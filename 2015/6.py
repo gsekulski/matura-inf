@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    kierowcy:list[str],
-    wyscigi:list[int | str],
-    wyniki:list[int | str]
+    kierowcy: list[str],
+    wyscigi: list[int | str],
+    wyniki: list[int | str]
 ) -> None:
     k = {i[0]: i[1:] for i in kierowcy}
 

@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    druzyny:list[int | str],
-    sedziowie:list[str],
-    wyniki:list[int | datetime | str]
+    druzyny: list[int | str],
+    sedziowie: list[str],
+    wyniki: list[int | datetime | str]
 ) -> None:
     x = [i[0] for i in druzyny if "Kucykowo" in i[2] and "Galop" not in i[2]]
     s1 = [{'T': 0, 'L': 0, 'P': 0}, {}]

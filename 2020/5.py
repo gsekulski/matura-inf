@@ -6,9 +6,9 @@ from lib.utils import parse, answer
 
 
 def solve(
-    panstwa:list[float | str],
-    jezyki:list[str],
-    uzytkownicy:list[float | str]
+    panstwa: list[float | str],
+    jezyki: list[str],
+    uzytkownicy: list[float | str]
 ) -> None:
     rodziny = {}
     for i in jezyki: rodziny[i[1]] = rodziny.get(i[1], []) + [i[0]]
